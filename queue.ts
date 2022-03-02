@@ -37,7 +37,7 @@ class GreatQueue {
   }
 
   sort() {
-    this.dataStore = this.dataStore.sort(
+    this.dataStore.sort(
       (e1: data, e2: data) => e1.importance - e2.importance,
     );
   }
