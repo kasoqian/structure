@@ -37,18 +37,9 @@ class GreatQueue {
   }
 
   sort() {
-    this.dataStore = this.dataStore
-      .reduce((result: any, cur: any) => {
-        if (!result[cur.importance]) {
-          result[cur.importance] = [];
-          result[cur.importance].push(cur);
-        }
-        return result;
-      }, [])
-      .reduce((result: any, cur: any) => {
-        cur.map((e: any) => result.push(e));
-        return result;
-      }, []);
+    this.dataStore = this.dataStore.sort(
+      (e1: data, e2: data) => e1.importance - e2.importance,
+    );
   }
 
   data() {
