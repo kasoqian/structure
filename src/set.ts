@@ -1,3 +1,4 @@
+// 集合
 class Collection {
   private dataStore: any[] = [1];
 
