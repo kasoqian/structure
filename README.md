@@ -17,11 +17,11 @@
 
 <img src="./asset/circular-list.png" alt="循环链表" title="循环链表" />
 
-- [ ] 字典
+- [x] 字典
 
 - [ ] 散列
 
-- [ ] 集合
+- [x] 集合
 
 - [ ] 二叉树
 
