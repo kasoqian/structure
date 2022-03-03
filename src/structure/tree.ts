@@ -1,4 +1,4 @@
-export class node {
+class node {
   data: any;
   left: any;
   right: any;
