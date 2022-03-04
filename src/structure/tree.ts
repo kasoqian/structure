@@ -16,21 +16,23 @@ class Tree {
   insert(element) {
     let newNode = new node(element);
 
-    var current = this.root;
-    var parent;
+    let currentNode = this.root;
+    let parentNode;
 
-    while (current) {
-      parent = current;
-      if (element < current.data) {
-        current = current.left;
-        if (current == null) {
-          parent.left = newNode;
+    while (currentNode) {
+      parentNode = currentNode;
+      if (element < currentNode.data) {
+        currentNode = currentNode.left;
+        if (currentNode == null) {
+          parentNode.left = newNode;
           break;
         }
-      } else {
-        current = current.right;
-        if (current == null) {
-          parent.right = newNode;
+      }
+
+      if (element >= currentNode.data) {
+        currentNode = currentNode.right;
+        if (currentNode == null) {
+          parentNode.right = newNode;
           break;
         }
       }
@@ -45,6 +47,7 @@ class Tree {
 const tree = new Tree();
 
 tree.insert(12);
+tree.insert(14);
 tree.insert(13);
 tree.insert(14);
 tree.insert(11);
