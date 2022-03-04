@@ -1,4 +1,4 @@
-// 普通非平衡二叉树
+// 普通非平衡二叉查找树
 export class node {
   data: any;
   left: any;
@@ -41,7 +41,6 @@ export class Tree {
 
   find(element) {
     let currentNode = this.root;
-    let childrenNode;
 
     while (currentNode.data != element) {
       if (element > currentNode?.data) {
@@ -59,7 +58,10 @@ export class Tree {
       }
     }
 
-    return currentNode;
+    return (
+      currentNode ||
+      `抱歉，您查找的"${element}"为空或属于非平衡节点。`
+    );
   }
 
   display() {
@@ -77,3 +79,4 @@ tree.insert(11);
 tree.insert(20);
 // console.log(JSON.stringify(tree.display()));
 console.log(tree.find(20));
+console.log(tree.find(13));
